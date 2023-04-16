@@ -1,0 +1,7 @@
+viacep:
+  url: https://viacep.com.br/ws/
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
