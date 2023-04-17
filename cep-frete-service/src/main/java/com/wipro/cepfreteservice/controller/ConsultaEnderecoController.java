@@ -1,6 +1,7 @@
 package com.wipro.cepfreteservice.controller;
 
 
+import com.wipro.cepfreteservice.exception.InvalidCepFormatException;
 import com.wipro.cepfreteservice.model.Endereco;
 import com.wipro.cepfreteservice.request.CepRequest;
 import com.wipro.cepfreteservice.service.FreteService;
@@ -22,6 +23,12 @@ public class ConsultaEnderecoController {
 
     @PostMapping
     public ResponseEntity<Endereco> consultaEndereco(@RequestBody CepRequest cepRequest) {
+        String cep = cepRequest.getCep();
+
+        if (!cep.matches("\\d{5}-?\\d{3}")) {
+            throw new InvalidCepFormatException("Formato de CEP inválido");
+        }
+
         Endereco endereco = viaCepService.buscaEnderecoPorCep(cepRequest.getCep());
         if (endereco != null) {
             endereco.setFrete(freteService.calculaFrete(endereco.getEstado()));
