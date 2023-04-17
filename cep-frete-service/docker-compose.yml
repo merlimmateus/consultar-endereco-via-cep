@@ -1,0 +1,7 @@
+version: '1'
+
+services:
+  cepfreteservice:
+    build: .
+    ports:
+      - "8080:8080"
