@@ -1,6 +1,7 @@
 package com.wipro.cepfreteservice.controller;
 
 
+import com.wipro.cepfreteservice.exception.CepNotFoundException;
 import com.wipro.cepfreteservice.exception.InvalidCepFormatException;
 import com.wipro.cepfreteservice.model.Endereco;
 import com.wipro.cepfreteservice.request.CepRequest;
@@ -34,7 +35,7 @@ public class ConsultaEnderecoController {
             endereco.setFrete(freteService.calculaFrete(endereco.getEstado()));
             return ResponseEntity.ok(endereco);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            throw new CepNotFoundException("CEP não encontrado: " + cepRequest.getCep());
         }
     }
 }
