@@ -37,7 +37,12 @@ public class ViaCepService {
                 if (jsonNode.has("erro") && jsonNode.get("erro").asBoolean()) {
                     throw new CepNotFoundException("CEP não encontrado");
                 } else {
-                    return objectMapper.convertValue(jsonNode, Endereco.class);
+                    Endereco endereco = objectMapper.convertValue(jsonNode, Endereco.class);
+                    endereco.setCep(jsonNode.get("cep").asText());
+                    endereco.setRua(jsonNode.get("logradouro").asText());
+                    endereco.setCidade(jsonNode.get("localidade").asText());
+                    endereco.setEstado(jsonNode.get("uf").asText());
+                    return endereco;
                 }
             } catch (IOException e) {
                 throw new RuntimeException("Erro ao processar a resposta da API ViaCEP", e);
