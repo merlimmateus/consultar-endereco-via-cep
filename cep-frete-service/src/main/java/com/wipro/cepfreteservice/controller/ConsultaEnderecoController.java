@@ -2,6 +2,7 @@ package com.wipro.cepfreteservice.controller;
 
 
 import com.wipro.cepfreteservice.model.Endereco;
+import com.wipro.cepfreteservice.request.CepRequest;
 import com.wipro.cepfreteservice.service.FreteService;
 import com.wipro.cepfreteservice.service.ViaCepService;
 import org.springframework.http.HttpStatus;
@@ -19,14 +20,14 @@ public class ConsultaEnderecoController {
         this.freteService = freteService;
     }
 
-    @PostMapping("/{cep}")
-    public ResponseEntity<Endereco> consultaEndereco(@PathVariable String cep) {
-        Endereco endereco = viaCepService.buscaEnderecoPorCep(cep);
+    @PostMapping
+    public ResponseEntity<Endereco> consultaEndereco(@RequestBody CepRequest cepRequest) {
+        Endereco endereco = viaCepService.buscaEnderecoPorCep(cepRequest.getCep());
         if (endereco != null) {
             endereco.setFrete(freteService.calculaFrete(endereco.getEstado()));
             return ResponseEntity.ok(endereco);
-        } else{
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 }
