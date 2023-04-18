@@ -7,7 +7,6 @@ import com.wipro.cepfreteservice.model.Endereco;
 import com.wipro.cepfreteservice.request.CepRequest;
 import com.wipro.cepfreteservice.service.FreteService;
 import com.wipro.cepfreteservice.service.ViaCepService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
