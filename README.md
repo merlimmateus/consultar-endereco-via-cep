@@ -21,11 +21,13 @@ DockerFile e docker-compose para facilitar a implantação
 ## Para iniciar o projeto, siga as etapas abaixo:
 
 ### Pré-requisitos 📚
-Instale o Java 11 ou superior
-Instale o Maven (opcional, se desejar usar a linha de comando)
-Instale o Docker e Docker Compose (se desejar usar o Docker para implantar a aplicação)
-Executando a aplicação localmente 🖥️
-Clone o repositório para sua máquina local:
+
+  - Instale o Java 11 ou superior
+  - Instale o Maven (opcional, se desejar usar a linha de comando)
+  - Instale o Docker e Docker Compose (se desejar usar o Docker para implantar a aplicação)
+  - Executando a aplicação localmente 🖥️
+
+### Clone o repositório para sua máquina local:
 
 ``` bash
 git clone https://github.com/seu_usuario/cep-frete-service.git
