@@ -2,13 +2,13 @@
 O projeto CEP Frete Service é uma aplicação desenvolvida em Java para consulta de endereços através do CEP, bem como cálculo de frete para determinado CEP. Para o projeto foi utilizado Git-flow para versionamento, e inclui testes com JUnit 5 e Cucumber, DockerFile, docker-compose e tratamento de exceções.
 
 # Tecnologias utilizadas 💻
-Java 11
-Spring Boot
-JUnit 5
-Cucumber
-Docker & Docker Compose
-Git-flow
-Swagger
+  - Java 11
+  - Spring Boot
+  - JUnit 5
+  - Cucumber
+  - Docker & Docker Compose
+  - Git-flow
+  - Swagger
 
 # Funcionalidades 🚀
 Consulta de endereços por CEP
