@@ -51,4 +51,12 @@ public class ViaCepService {
             throw new RuntimeException("Erro na requisição para a API ViaCEP, status code: " + response.getStatusCode());
         }
     }
+
+    public void setViaCepUrl(String viaCepUrl) {
+        this.viaCepUrl = viaCepUrl;
+    }
+
+    public String getViaCepUrl() {
+        return viaCepUrl;
+    }
 }
