@@ -25,7 +25,8 @@ O projeto CEP Frete Service é uma aplicação desenvolvida em Java para consult
   - Instale o Java 11 ou superior
   - Instale o Maven (opcional, se desejar usar a linha de comando)
   - Instale o Docker e Docker Compose (se desejar usar o Docker para implantar a aplicação)
-  - Executando a aplicação localmente 🖥️
+  
+## Executando a aplicação localmente 🖥️
 
 ### Clone o repositório para sua máquina local:
 
