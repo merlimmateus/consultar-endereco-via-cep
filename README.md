@@ -35,7 +35,6 @@ git clone https://github.com/seu_usuario/cep-frete-service.git
 ### Navegue até a pasta do projeto:
 
 ``` bash
-Copy code
 cd cep-frete-service
 ```
 Execute a aplicação usando Maven:
