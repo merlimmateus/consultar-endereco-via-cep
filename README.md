@@ -11,11 +11,11 @@ O projeto CEP Frete Service é uma aplicação desenvolvida em Java para consult
   - Swagger
 
 # Funcionalidades 🚀
-Consulta de endereços por CEP
-Cálculo de frete para determinado CEP
-Tratamento de exceções personalizado
-Testes com JUnit e Cucumber
-DockerFile e docker-compose para facilitar a implantação
+  - Consulta de endereços por CEP
+  - Cálculo de frete para determinado CEP
+  - Tratamento de exceções personalizado
+  - Testes com JUnit e Cucumber
+  - DockerFile e docker-compose para facilitar a implantação
 
 # Como iniciar o projeto 🚀
 ## Para iniciar o projeto, siga as etapas abaixo:
